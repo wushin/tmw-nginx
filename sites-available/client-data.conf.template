@@ -1,0 +1,8 @@
+server {
+   listen 80;
+   server_name ${CLIENT_DATA_SERVER};
+   location / {
+     root /server/game-data/;
+     try_files /$uri /$uri/ =404;
+   }
+}
